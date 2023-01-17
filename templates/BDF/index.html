@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+
+        body
+        {
+            background-image: url("https://labdhpurohit.github.io/images/bg3.jpg");
+            background-size: cover;
+            /* background: radial-gradient(circle at center, #440050, #0c0318); */
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .head1
+        {
+          text-align: center;
+          margin-top: 50px;
+          color: rgb(164, 123, 238);
+        }
+        .container
+        {
+          margin-top: 50px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+
+
+        .text{
+          padding: 5px;
+          font-size: 1.0em;
+          width: 40%;
+          border-radius: 5px;
+          background: #0c0318;
+          color: white;
+        }
+
+        .button1{
+          margin-left: 10px;
+          background-color: #0c03187a;
+          color: wheat;
+          padding: 8px;
+          border-radius: 10px;
+        }
+        
+
+        .para
+        {
+          text-align: center;
+          margin-top: 50px;
+          margin: 50px;
+        }
+
+        .que
+        {
+          /* text-align: center; */
+          margin-top: 50px;
+          margin-left: 10px;
+        }
+
+        p{
+          overflow-wrap: break-word;
+        }
+
+        .para-white1
+        {
+          color: rgb(232, 220, 255);
+        }
+
+        .para-white2
+        {
+          color: rgb(163, 114, 255);
+        }
+
+
+        .para-sen1
+        {
+          color: rgb(232, 220, 255);
+          width: 50%;
+          margin: 0 auto; 
+          text-align: center; 
+          background-color: rgb(83, 83, 83);
+          padding:5px;
+          border-radius: 10px;
+          margin-top: 10px;
+          box-shadow: 2px 2px 5px rgb(0, 0, 0);
+          
+        }
+        
+
+        .foot{
+          height: 100vh;
+          padding-bottom: 30px;
+          padding-top: 2px;
+        }
+
+        .feedback
+        {
+          margin-top: 30px;
+          text-decoration: none;
+          padding: 10px;
+          padding-left: 20px;
+          padding-right: 20px;
+          border-radius: 5px;
+          color: white;
+          border: 1px solid black;
+          background-color: rgb(0, 0, 0);
+        }
+
+        .form_2
+        {
+          margin-top: 120px;
+        }
+
+        #feed{
+          margin-top: 20px;
+        }
+
+        .feed_text
+        {
+          width: 50%;
+          padding: 5px;
+          margin: 10px;
+        }
+    </style>
+    <title>Labdh Purohit</title>
+</head>
+<body>
+    <h1 class="head1">BOLLYWOOD DIALOGUE FINDER</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form1.as_p }}
+        <div class="container">
+        <input type="text" id="title" class="text" name="name">
+        <button type="submit" class="button1">PRESS</button>
+        </div>
+    </form>
+    <div class="para">
+
+    <div class="para-white1">
+    <h2 style="overflow-wrap: break-word;">{{Title}}{{Error}}</h2>
+    </div>
+
+    <!-- <div class="para-sen">
+    <p>{{Error}}</p>
+    </div> -->
+
+    <div class="para-sen">
+    <p class="para-white1" style="font-weight: bold;">{{RD}}</p>
+    </div>
+    <br><br>
+
+    
+    <div class="para-sen">
+    <p class="para-white1">{{quote1}}</p>
+    <p class="para-white2">{{quote_tran1}}</p>
+    </div>
+
+    <br><br>
+
+    <div class="para-sen">
+    <p class="para-white1">{{quote2}}</p>
+    <p class="para-white2">{{quote_tran2}}</p>
+    </div>
+
+    <br><br>
+
+    <div class="para-sen">
+    <p class="para-white1">{{quote3}}</p>
+    <p class="para-white2">{{quote_tran3}}</p>
+    </div>
+
+    <br><br>
+
+    <div class="para-sen">
+    <p class="para-white1">{{quote4}}</p>
+    <p class="para-white2">{{quote_tran4}}</p>
+    </div>
+
+  </div>
+  <div class="que">
+  <h3 style="color: rgb(164, 123, 238);">Important Notes:</h3>
+  <ul class="para-white1">
+    <li>Movie should be released before 2022.</li>
+    <li>Please write full Movie Name and Correct Spelling.</li>
+    <li>Movie should be Bollywood.</li>
+    <li>Some Bollywood Movies are Remaked. So, In this case you should write Movie Name with its released year like: Love Aaj Kal (2020).</li>
+    <li>This is just a Fun Project of Mine. So, Sorry if you didn't find your Movie dialogues. I will try my best to Update this Project. :)</li>
+    <li>If you have any feedback on this project don't hesitate to <a href="mailto:devlabdh@gmail.com">Mail me</a>.</li>
+  </ul>
+  </div>
+</body>
+</html>
